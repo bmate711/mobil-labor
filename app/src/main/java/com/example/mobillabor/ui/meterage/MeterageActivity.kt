@@ -1,11 +1,8 @@
-package hu.bme.aut.android.kotifydemo.ui.main
+package com.example.mobillabor.ui.meterage
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobillabor.R
-import com.example.mobillabor.ui.meterage.MeteragePresenter
-import com.example.mobillabor.ui.meterage.MeterageScreen
 
 
 class MeterageActivity : AppCompatActivity(), MeterageScreen {

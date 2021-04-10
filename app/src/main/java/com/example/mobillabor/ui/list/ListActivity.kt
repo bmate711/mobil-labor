@@ -3,7 +3,6 @@ package com.example.mobillabor.ui.list
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mobillabor.R
-import com.example.mobillabor.ui.meterage.MeteragePresenter
 
 class ListActivity : AppCompatActivity(), ListScreen {
     override fun onCreate(savedInstanceState: Bundle?) {
