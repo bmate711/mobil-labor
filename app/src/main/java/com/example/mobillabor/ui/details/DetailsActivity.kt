@@ -1,33 +1,35 @@
-package com.example.mobillabor.ui.list
+package com.example.mobillabor.ui.details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mobillabor.R
-import com.example.mobillabor.ui.meterage.MeteragePresenter
 
-class ListActivity : AppCompatActivity(), ListScreen {
+class DetailsActivity : AppCompatActivity(), DetailsScreen {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list)
+        setContentView(R.layout.activity_details)
     }
 
     override fun onStart() {
         super.onStart()
-        ListPresenter.attachScreen(this)
+        DetailsPresenter.attachScreen(this)
     }
 
     override fun onStop() {
+        DetailsPresenter.detachScreen()
         super.onStop()
-        ListPresenter.detachScreen()
     }
 
     override fun onResume() {
         super.onResume()
-        ListPresenter.queryMeterages(this)
+        DetailsPresenter.queryMeterageDetails("0");
     }
 
-    override fun showList(list: List<String>) {
+    override fun showMeterageDetails(data: String) {
         TODO("Not yet implemented")
     }
 
+    override fun showError(error: String) {
+        TODO("Not yet implemented")
+    }
 }
