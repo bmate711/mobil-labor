@@ -8,7 +8,7 @@ import com.example.mobillabor.R
 class MeterageActivity : AppCompatActivity(), MeterageScreen {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_meterage)
 
     }
 
@@ -29,10 +29,10 @@ class MeterageActivity : AppCompatActivity(), MeterageScreen {
 
 
     override fun showSucces() {
-        TODO("Not yet implemented")
+
     }
 
     override fun updateScales(scales: FloatArray) {
-        TODO("Not yet implemented")
+
     }
 }
