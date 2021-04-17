@@ -1,8 +1,9 @@
 package com.example.mobillabor.ui.meterage
 
 import com.example.mobillabor.ui.Presenter
+import javax.inject.Inject
 
-object MeteragePresenter:  Presenter<MeterageScreen>() {
+class MeteragePresenter @Inject constructor():  Presenter<MeterageScreen>() {
 
     fun CreateNewMeterage() {
         screen?.showSucces();

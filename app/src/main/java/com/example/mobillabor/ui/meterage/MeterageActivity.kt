@@ -3,9 +3,14 @@ package com.example.mobillabor.ui.meterage
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobillabor.R
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class MeterageActivity : AppCompatActivity(), MeterageScreen {
+    @Inject
+    lateinit var presenter:  MeteragePresenter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meterage)
@@ -14,17 +19,17 @@ class MeterageActivity : AppCompatActivity(), MeterageScreen {
 
     override fun onStart() {
         super.onStart()
-        MeteragePresenter.attachScreen(this)
+        presenter.attachScreen(this)
     }
 
     override fun onResume() {
         super.onResume()
-        MeteragePresenter.GetScales()
+        presenter.GetScales()
     }
 
     override fun onStop() {
         super.onStop()
-        MeteragePresenter.detachScreen()
+        presenter.detachScreen()
     }
 
 

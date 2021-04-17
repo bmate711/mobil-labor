@@ -1,8 +1,9 @@
 package com.example.mobillabor.ui.details
 
 import com.example.mobillabor.ui.Presenter
+import javax.inject.Inject
 
-object DetailsPresenter: Presenter<DetailsScreen?>() {
+class DetailsPresenter @Inject constructor(): Presenter<DetailsScreen?>() {
     fun queryMeterageDetails(id: String) {
         
     }

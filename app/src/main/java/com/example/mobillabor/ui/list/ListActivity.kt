@@ -3,8 +3,15 @@ package com.example.mobillabor.ui.list
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mobillabor.R
+import com.example.mobillabor.ui.meterage.MeteragePresenter
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class ListActivity : AppCompatActivity(), ListScreen {
+    @Inject
+    lateinit var presenter: ListPresenter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
@@ -12,17 +19,17 @@ class ListActivity : AppCompatActivity(), ListScreen {
 
     override fun onStart() {
         super.onStart()
-        ListPresenter.attachScreen(this)
+        presenter.attachScreen(this)
     }
 
     override fun onStop() {
         super.onStop()
-        ListPresenter.detachScreen()
+        presenter.detachScreen()
     }
 
     override fun onResume() {
         super.onResume()
-        ListPresenter.queryMeterages(this)
+        presenter.queryMeterages(this)
     }
 
     override fun showList(list: List<String>) {
