@@ -26,13 +26,6 @@ class MeterageActivity : AppCompatActivity(), MeterageScreen {
 
     override fun onResume() {
         super.onResume()
-        val meterage = Meterage()
-        meterage.license = "AAA-000"
-        meterage.place = "teszt"
-        meterage.product = "product"
-        meterage.date = Date();
-        meterage.values =  floatArrayOf(3001.1f, 3002.1f, 3000.4f, 3002.4f)
-        presenter.CreateNewMeterage(meterage)
     }
 
     override fun onStop() {

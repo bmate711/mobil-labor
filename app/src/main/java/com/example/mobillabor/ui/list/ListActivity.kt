@@ -3,6 +3,7 @@ package com.example.mobillabor.ui.list
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mobillabor.R
+import com.example.mobillabor.model.Meterage
 import com.example.mobillabor.ui.meterage.MeteragePresenter
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -32,7 +33,7 @@ class ListActivity : AppCompatActivity(), ListScreen {
         presenter.queryMeterages()
     }
 
-    override fun showList(list: List<String>) {
+    override fun showList(list: List<Meterage>) {
     }
 
 }

@@ -1,6 +1,5 @@
 package com.example.mobillabor.network
 
-import com.example.mobillabor.model.MeterageListGetResponse
 import com.example.mobillabor.model.Meterage
 import com.example.mobillabor.model.MeteragePostResponse
 import retrofit2.Call
