@@ -29,11 +29,10 @@ class ListActivity : AppCompatActivity(), ListScreen {
 
     override fun onResume() {
         super.onResume()
-        presenter.queryMeterages(this)
+        presenter.queryMeterages()
     }
 
     override fun showList(list: List<String>) {
-        TODO("Not yet implemented")
     }
 
 }
